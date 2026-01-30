@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Player {
+  id        Int        @id @default(autoincrement())
+  address   String     @unique
+  createdAt DateTime   @default(now())
+  balances  Balance?
+  bets      Bet[]
+  transfers Transfer[]
+}
+
+model Balance {
+  id        Int      @id @default(autoincrement())
+  playerId  Int      @unique
+  available BigInt   @default(0)
+  locked    BigInt   @default(0)
+  points    BigInt   @default(0)
+  updatedAt DateTime @updatedAt
+  player    Player   @relation(fields: [playerId], references: [id])
+}
+
+model Round {
+  id          Int      @id
+  timeframe   Int
+  startAt     DateTime
+  endAt       DateTime
+  winningSide String?
+  status      String   @default("open")
+  createdAt   DateTime @default(now())
+  bets        Bet[]
+}
+
+model Bet {
+  id        Int      @id @default(autoincrement())
+  playerId  Int
+  roundId   Int
+  amount    BigInt
+  side      String
+  status    String   @default("pending")
+  createdAt DateTime @default(now())
+  player    Player   @relation(fields: [playerId], references: [id])
+  round     Round    @relation(fields: [roundId], references: [id])
+}
+
+model Transfer {
+  id        Int      @id @default(autoincrement())
+  playerId  Int
+  type      String
+  amount    BigInt
+  meta      Json?
+  createdAt DateTime @default(now())
+  player    Player   @relation(fields: [playerId], references: [id])
+}

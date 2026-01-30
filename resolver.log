@@ -1,0 +1,138 @@
+
+> hyperliquid-predict@0.1.0 resolver
+> node scripts/autoResolver.js
+
+[dotenv@17.2.3] injecting env (3) from config.env -- tip: ⚙️  suppress all logs with { quiet: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Auto-resolver started. Contract: 0x8fD9B0063Ea72a7216ca56dbE71E97900603e29c
+resolveLoop error: Error: getaddrinfo ENOTFOUND sepolia.infura.io
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'sepolia.infura.io'
+}
+resolveLoop error: Error: getaddrinfo ENOTFOUND sepolia.infura.io
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'sepolia.infura.io'
+}
+resolveLoop error: Error: getaddrinfo ENOTFOUND sepolia.infura.io
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'sepolia.infura.io'
+}
+resolveLoop error: Error: request timeout (code=TIMEOUT, version=6.15.0)
+    at makeError (/Users/sithu/Downloads/HypePredict/hyperliquid-predict/node_modules/ethers/lib.commonjs/utils/errors.js:137:21)
+    at ClientRequest.<anonymous> (/Users/sithu/Downloads/HypePredict/hyperliquid-predict/node_modules/ethers/lib.commonjs/utils/geturl.js:59:50)
+    at ClientRequest.emit (node:events:518:28)
+    at TLSSocket.emitRequestTimeout (node:_http_client:863:9)
+    at Object.onceWrapper (node:events:632:28)
+    at TLSSocket.emit (node:events:530:35)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'TIMEOUT',
+  shortMessage: 'request timeout'
+}
+resolveLoop error: Error: getaddrinfo ENOTFOUND sepolia.infura.io
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'sepolia.infura.io'
+}
+resolveLoop error: Error: getaddrinfo ENOTFOUND sepolia.infura.io
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'sepolia.infura.io'
+}
+[resolver] resolving roundId 1759255440 totals up/down 300000000000000 0
+[resolver] round 1759255440 players 1
+[resolver] check bet 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 prediction true amount 300000000000000
+[resolver] winningPrediction DOWN winner 0x0000000000000000000000000000000000000000
+Resolved round 1759255440 winner 0x0000000000000000000000000000000000000000 pred false 0xa5ae52edeae62253b08dc481efdf1c740acef3e41f517e0e7b3f4f15a88d0c50
+[resolver] resolving roundId 1759255500 totals up/down 0 300000000000000
+[resolver] round 1759255500 players 1
+[resolver] check bet 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 prediction false amount 300000000000000
+[resolver] winningPrediction DOWN winner 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68
+Resolved round 1759255500 winner 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 pred false 0x1db8a82410e046d7f463e39e8e160012430d6704c635d06368995cc2a93be7a8
+[resolver] resolving roundId 1759255560 totals up/down 0 300000000000000
+[resolver] round 1759255560 players 1
+[resolver] check bet 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 prediction false amount 300000000000000
+[resolver] winningPrediction UP winner 0x0000000000000000000000000000000000000000
+Resolved round 1759255560 winner 0x0000000000000000000000000000000000000000 pred true 0xb2d3f198f0d43265eca42e328b51763aa0df8e6831448eb93071d7c0ca7fbe2e
+[resolver] resolving roundId 1759255620 totals up/down 300000000000000 0
+[resolver] round 1759255620 players 1
+[resolver] check bet 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 prediction true amount 300000000000000
+[resolver] winningPrediction UP winner 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68
+Resolved round 1759255620 winner 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 pred true 0x37e8d7abdf762a2638d441f00e549e8d6a7f626afba9978076995e07dc673be1
+[resolver] resolving roundId 1759255680 totals up/down 300000000000000 0
+Resolved (no-winner) round 1759255680 0xfa36d5222c153b1064c9219ba8cc93a652426723aa7de880fdc9bd4540b46e87
+[resolver] resolving roundId 1759256940 totals up/down 100000000000000 0
+[resolver] round 1759256940 players 1
+[resolver] check bet 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 prediction true amount 100000000000000
+[resolver] winningPrediction UP winner 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68
+Resolved round 1759256940 winner 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 pred true 0x8237376eb79177cab28419f091b64490a3174f7b5d48a82c391bce34ab0b1b73
+[resolver] resolving roundId 1759257000 totals up/down 500000000000000 0
+[resolver] round 1759257000 players 1
+[resolver] check bet 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 prediction true amount 500000000000000
+[resolver] winningPrediction DOWN winner 0x0000000000000000000000000000000000000000
+Resolved round 1759257000 winner 0x0000000000000000000000000000000000000000 pred false 0xcb91b705685e2eefcf257a45bdcf86bab8480b1db2486ec47f76782e055ff25a
+[resolver] resolving roundId 1759257600 totals up/down 300000000000000 0
+[resolver] round 1759257600 players 1
+[resolver] check bet 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 prediction true amount 300000000000000
+[resolver] winningPrediction DOWN winner 0x0000000000000000000000000000000000000000
+Resolved round 1759257600 winner 0x0000000000000000000000000000000000000000 pred false 0x19b32b862dba539004bad661606b7cc879774aaa56bbaaed3511c2a9199aa488
+[resolver] resolving roundId 1759257660 totals up/down 300000000000000 0
+[resolver] round 1759257660 players 1
+[resolver] check bet 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 prediction true amount 300000000000000
+[resolver] winningPrediction UP winner 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68
+Resolved round 1759257660 winner 0xde2371Ac2D8Bd199e7E52162639B14F43cb88E68 pred true 0x42b6f1a8a487dc54eea2d8ea34d44d15d6883d5de5df89898a3c1198cfa532cd
+[resolver] resolving roundId 1759257720 totals up/down 300000000000000 0
+[resolver] resolving roundId 1759257720 totals up/down 300000000000000 0
+Resolved (no-winner) round 1759257720 0x6e1565942cf653ff1e681800b282ea0c7a272ed558db25941f533079aece4e85
+resolveLoop error: Error: transaction execution reverted (action="sendTransaction", data=null, reason=null, invocation=null, revert=null, transaction={ "data": "", "from": "0x5460156db508fC52161A97585c27035eEDf2D3ba", "to": "0x8fD9B0063Ea72a7216ca56dbE71E97900603e29c" }, receipt={ "_type": "TransactionReceipt", "blobGasPrice": null, "blobGasUsed": null, "blockHash": "0xa227ca8292c17b95ffb3ff72b1b6795ae4bde8ed8a3bab61b9c173f1975793d8", "blockNumber": 9314374, "contractAddress": null, "cumulativeGasUsed": "4752321", "from": "0x5460156db508fC52161A97585c27035eEDf2D3ba", "gasPrice": "1000716", "gasUsed": "33469", "hash": "0x3ebfe8f35e6a941295f20d74fad012abab04bf6c1eb890ae41c5944730565209", "index": 36, "logs": [  ], "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "root": null, "status": 0, "to": "0x8fD9B0063Ea72a7216ca56dbE71E97900603e29c" }, code=CALL_EXCEPTION, version=6.15.0)
+    at makeError (/Users/sithu/Downloads/HypePredict/hyperliquid-predict/node_modules/ethers/lib.commonjs/utils/errors.js:137:21)
+    at assert (/Users/sithu/Downloads/HypePredict/hyperliquid-predict/node_modules/ethers/lib.commonjs/utils/errors.js:157:15)
+    at checkReceipt (/Users/sithu/Downloads/HypePredict/hyperliquid-predict/node_modules/ethers/lib.commonjs/providers/provider.js:1135:35)
+    at JsonRpcProvider.txListener (/Users/sithu/Downloads/HypePredict/hyperliquid-predict/node_modules/ethers/lib.commonjs/providers/provider.js:1181:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  code: 'CALL_EXCEPTION',
+  action: 'sendTransaction',
+  data: null,
+  reason: null,
+  invocation: null,
+  revert: null,
+  transaction: {
+    to: '0x8fD9B0063Ea72a7216ca56dbE71E97900603e29c',
+    from: '0x5460156db508fC52161A97585c27035eEDf2D3ba',
+    data: ''
+  },
+  receipt: TransactionReceipt {
+    provider: JsonRpcProvider {},
+    to: '0x8fD9B0063Ea72a7216ca56dbE71E97900603e29c',
+    from: '0x5460156db508fC52161A97585c27035eEDf2D3ba',
+    contractAddress: null,
+    hash: '0x3ebfe8f35e6a941295f20d74fad012abab04bf6c1eb890ae41c5944730565209',
+    index: 36,
+    blockHash: '0xa227ca8292c17b95ffb3ff72b1b6795ae4bde8ed8a3bab61b9c173f1975793d8',
+    blockNumber: 9314374,
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+    gasUsed: 33469n,
+    blobGasUsed: null,
+    cumulativeGasUsed: 4752321n,
+    gasPrice: 1000716n,
+    blobGasPrice: null,
+    type: 2,
+    status: 0,
+    root: undefined
+  },
+  shortMessage: 'transaction execution reverted'
+}

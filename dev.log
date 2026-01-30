@@ -1,0 +1,623 @@
+
+> hyperliquid-predict@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.3
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.100.38:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 5.5s
+ ○ Compiling /api/offchain/profile ...
+ ✓ Compiled /api/offchain/profile in 967ms (296 modules)
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 1332ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 66ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 78ms
+ ○ Compiling /game ...
+ ✓ Compiled /game in 28.4s (10618 modules)
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 12513ms
+ GET /game 200 in 30360ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 31ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled / in 3.2s (5487 modules)
+ ✓ Compiled in 8.4s (5121 modules)
+ GET /favicon.ico 200 in 12354ms
+ GET /favicon.ico 200 in 112ms
+ HEAD /game 200 in 2364ms
+ GET / 200 in 12692ms
+ GET /favicon.ico 200 in 537ms
+ GET /game 200 in 716ms
+ GET / 200 in 127ms
+ GET /favicon.ico 200 in 85ms
+ GET /favicon.ico 200 in 72ms
+ ○ Compiling /api/price-data ...
+ ✓ Compiled /api/price-data in 7.5s (10615 modules)
+Fetching HYPE price from Hyperliquid...
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 7532ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 122ms
+ GET / 200 in 9088ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 9814ms
+Successfully fetched ETH data from API: 100 candles
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 9622ms
+ ○ Compiling /withdraw ...
+ ✓ Compiled /withdraw in 36.4s (10622 modules)
+Fetching HYPE price from Hyperliquid...
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 25462ms
+ETH API source failed: Error: API timeout
+    at Timeout.eval [as _onTimeout] (src/app/api/price-data/route.ts:118:37)
+  116 |         try {
+  117 |           const timeoutPromise = new Promise((_, reject) => 
+> 118 |             setTimeout(() => reject(new Error('API timeout')), 3000)
+      |                                     ^
+  119 |           );
+  120 |           
+  121 |           data = await Promise.race([source(), timeoutPromise]);
+ETH API source failed: Error: API timeout
+    at Timeout.eval [as _onTimeout] (src/app/api/price-data/route.ts:118:37)
+  116 |         try {
+  117 |           const timeoutPromise = new Promise((_, reject) => 
+> 118 |             setTimeout(() => reject(new Error('API timeout')), 3000)
+      |                                     ^
+  119 |           );
+  120 |           
+  121 |           data = await Promise.race([source(), timeoutPromise]);
+ HEAD /game 200 in 28316ms
+ GET /withdraw 200 in 41560ms
+ GET / 200 in 41403ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 112ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 26439ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 40456ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 40455ms
+ GET /withdraw 200 in 135ms
+ GET /game 200 in 186ms
+Successfully fetched ETH data from API: 101 candles
+Successfully fetched ETH data from API: 101 candles
+ GET /favicon.ico 200 in 363ms
+ GET /favicon.ico 200 in 166ms
+ GET /favicon.ico 200 in 113ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 342ms
+ GET /favicon.ico 200 in 109ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 101ms
+ GET /favicon.ico 200 in 47ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 99ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 303ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 20ms
+ GET / 200 in 412ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 17ms
+ GET / 200 in 63ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 13ms
+ HEAD /game 200 in 97ms
+ ○ Compiling /api/offchain/bets ...
+ ✓ Compiled /api/offchain/bets in 11.6s (10624 modules)
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 6895ms
+ POST /api/offchain/bets 200 in 11834ms
+ ✓ Compiled in 3.5s (5137 modules)
+ GET /game 200 in 319ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 103ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 211ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 84ms
+ ○ Compiling /api/offchain/resolve ...
+ ✓ Compiled /api/offchain/resolve in 6.3s (10626 modules)
+[resolve] start { roundId: 1759333560, winningSide: 'down' }
+[resolve] start { roundId: 1759333560, winningSide: 'down' }
+[resolve] error TypeError: Body is unusable: Body has already been read
+    at POST (src/app/api/offchain/resolve/route.ts:9:48)
+   7 |   } catch {}
+   8 |   try {
+>  9 |     const { roundId, winningSide } = await req.json();
+     |                                                ^
+  10 |     if (!roundId || !winningSide) return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
+  11 |
+  12 |     const result = await prisma.$transaction(async (tx) => {
+[resolve] error TypeError: Body is unusable: Body has already been read
+    at POST (src/app/api/offchain/resolve/route.ts:9:48)
+   7 |   } catch {}
+   8 |   try {
+>  9 |     const { roundId, winningSide } = await req.json();
+     |                                                ^
+  10 |     if (!roundId || !winningSide) return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
+  11 |
+  12 |     const result = await prisma.$transaction(async (tx) => {
+ POST /api/offchain/resolve 400 in 6688ms
+ POST /api/offchain/resolve 400 in 6851ms
+ GET /game 200 in 905ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 258ms
+ POST /api/offchain/bets 200 in 143ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 66ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 34ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 43ms
+[resolve] start { roundId: 1759333620, winningSide: 'down' }
+[resolve] error TypeError: Body is unusable: Body has already been read
+    at POST (src/app/api/offchain/resolve/route.ts:9:48)
+   7 |   } catch {}
+   8 |   try {
+>  9 |     const { roundId, winningSide } = await req.json();
+     |                                                ^
+  10 |     if (!roundId || !winningSide) return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
+  11 |
+  12 |     const result = await prisma.$transaction(async (tx) => {
+ POST /api/offchain/resolve 400 in 266ms
+[resolve] start { roundId: 1759333620, winningSide: 'down' }
+[resolve] error TypeError: Body is unusable: Body has already been read
+    at POST (src/app/api/offchain/resolve/route.ts:9:48)
+   7 |   } catch {}
+   8 |   try {
+>  9 |     const { roundId, winningSide } = await req.json();
+     |                                                ^
+  10 |     if (!roundId || !winningSide) return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
+  11 |
+  12 |     const result = await prisma.$transaction(async (tx) => {
+ POST /api/offchain/resolve 400 in 151ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 1899ms
+ ○ Compiling /withdraw ...
+ ✓ Compiled /withdraw in 3s (5492 modules)
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 3417ms
+ GET /withdraw 200 in 6438ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 90ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 25ms
+ GET /game 200 in 103ms
+ ○ Compiling /api/price-data ...
+ ✓ Compiled /api/price-data in 1686ms (5494 modules)
+Fetching HYPE price from Hyperliquid...
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 3508ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 12ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 3823ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 39ms
+Successfully fetched ETH data from API: 100 candles
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 4858ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 29ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 10ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 32ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 390ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 66ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 235ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 104ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 133ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 183ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 146ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 198ms
+Fetching HYPE price from Hyperliquid...
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 689ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 208ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 154ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 145ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 106ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 160ms
+Fetching HYPE price from Hyperliquid...
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 623ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 161ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 119ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 172ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 186ms
+ GET /game 200 in 2954ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled / in 11.3s (5481 modules)
+ ✓ Compiled /api/price-data in 8ms (5486 modules)
+ ✓ Compiled /api/offchain/profile in 4ms (5490 modules)
+ ✓ Compiled in 1ms (5494 modules)
+ GET /favicon.ico 200 in 28570ms
+ ✓ Compiled in 4ms (5494 modules)
+ GET / 200 in 29918ms
+ ✓ Compiled in 1ms (5494 modules)
+Fetching HYPE price from Hyperliquid...
+Fetching HYPE price from Hyperliquid...
+Successfully fetched ETH data from API: 100 candles
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 8704ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 11316ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 10980ms
+ ✓ Compiled in 1ms (5494 modules)
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 10500ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 10411ms
+ ✓ Compiled in 1ms (5494 modules)
+Successfully fetched ETH data from API: 100 candles
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 10900ms
+ ✓ Compiled in 2ms (5494 modules)
+ GET / 200 in 8750ms
+ ✓ Compiled in 1ms (5494 modules)
+Successfully fetched ETH data from API: 100 candles
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 9089ms
+ GET /favicon.ico 200 in 8222ms
+ GET /favicon.ico 200 in 8179ms
+ HEAD /game 200 in 9504ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 8473ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 45ms
+ ○ Compiling /api/offchain/bets ...
+ ✓ Compiled /api/offchain/bets in 2.8s (5496 modules)
+ POST /api/offchain/bets 200 in 2993ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 34ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 90ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 31ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 55ms
+ ○ Compiling /api/offchain/resolve ...
+ ✓ Compiled /api/offchain/resolve in 2.7s (5489 modules)
+[resolve] start { roundId: 1759336500, winningSide: 'down' }
+[resolve] start { roundId: 1759336500, winningSide: 'down' }
+[resolve] error TypeError: Body is unusable: Body has already been read
+    at POST (src/app/api/offchain/resolve/route.ts:9:48)
+   7 |   } catch {}
+   8 |   try {
+>  9 |     const { roundId, winningSide } = await req.json();
+     |                                                ^
+  10 |     if (!roundId || !winningSide) return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
+  11 |
+  12 |     const result = await prisma.$transaction(async (tx) => {
+[resolve] error TypeError: Body is unusable: Body has already been read
+    at POST (src/app/api/offchain/resolve/route.ts:9:48)
+   7 |   } catch {}
+   8 |   try {
+>  9 |     const { roundId, winningSide } = await req.json();
+     |                                                ^
+  10 |     if (!roundId || !winningSide) return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
+  11 |
+  12 |     const result = await prisma.$transaction(async (tx) => {
+ POST /api/offchain/resolve 400 in 2981ms
+ POST /api/offchain/resolve 400 in 2995ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 82ms
+ POST /api/offchain/bets 200 in 72ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 34ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 57ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 141ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 88ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 38ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 82ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 35ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 88ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 234ms
+ ○ Compiling /api/price-data ...
+ ✓ Compiled /api/price-data in 4.7s (5487 modules)
+Fetching HYPE price from Hyperliquid...
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 5115ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 96ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 196ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 515ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 839ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 335ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 200ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 147ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 203ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 436ms
+ ✓ Compiled in 7.7s (5137 modules)
+ GET /game 200 in 769ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 92ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 524ms
+ GET /game 200 in 2420ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled / in 5.1s (5487 modules)
+ ✓ Compiled (5492 modules)
+ GET /favicon.ico 200 in 6629ms
+ GET / 200 in 6724ms
+ GET / 200 in 139ms
+ ○ Compiling /api/price-data ...
+ ✓ Compiled /api/price-data in 1230ms (5494 modules)
+Fetching HYPE price from Hyperliquid...
+Fetching HYPE price from Hyperliquid...
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 2095ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 1736ms
+ HEAD /game 200 in 1359ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 146ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 144ms
+ GET /favicon.ico 200 in 62ms
+ GET /favicon.ico 200 in 47ms
+Successfully fetched ETH data from API: 100 candles
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 329ms
+Successfully fetched ETH data from API: 100 candles
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 332ms
+Successfully fetched ETH data from API: 100 candles
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 337ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 172ms
+ ○ Compiling /api/offchain/bets ...
+ ✓ Compiled /api/offchain/bets in 4.7s (5496 modules)
+ POST /api/offchain/bets 200 in 5072ms
+ ✓ Compiled in 4.4s (5137 modules)
+ GET /game 200 in 199ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 20ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 94ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 33ms
+ ○ Compiling /api/offchain/resolve ...
+ ✓ Compiled /api/offchain/resolve in 1517ms (5493 modules)
+[resolve] start { roundId: 1759337040, winningSide: 'down' }
+[resolve] start { roundId: 1759337040, winningSide: 'down' }
+ GET /game 200 in 324ms
+[resolve] result {
+  resolved: true,
+  credits: [ { playerId: 2, delta: '-200000000000000', status: 'lost' } ]
+}
+ POST /api/offchain/resolve 200 in 1821ms
+[resolve] result { already: true }
+ POST /api/offchain/resolve 200 in 1988ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 788ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 55ms
+ ✓ Compiled in 2.1s (5137 modules)
+ GET /game 200 in 729ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 272ms
+ POST /api/offchain/bets 200 in 143ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 38ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 25ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 109ms
+[resolve] start { roundId: 1759337100, winningSide: 'down' }
+[resolve] result {
+  resolved: true,
+  credits: [ { playerId: 2, delta: '380000000000000', status: 'won' } ]
+}
+ POST /api/offchain/resolve 200 in 130ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 23ms
+[resolve] start { roundId: 1759337100, winningSide: 'down' }
+[resolve] result { already: true }
+ POST /api/offchain/resolve 200 in 22ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 63ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 356ms
+ POST /api/offchain/bets 200 in 173ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 109ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 37ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 51ms
+[resolve] start { roundId: 1759337160, winningSide: 'down' }
+[resolve] start { roundId: 1759337160, winningSide: 'down' }
+[resolve] result {
+  resolved: true,
+  credits: [ { playerId: 2, delta: '-200000000000000', status: 'lost' } ]
+}
+ POST /api/offchain/resolve 200 in 81ms
+[resolve] result { already: true }
+ POST /api/offchain/resolve 200 in 67ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 98ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 623ms
+ ✓ Compiled in 4.3s (5137 modules)
+ POST /api/offchain/bets 200 in 251ms
+ GET /game 200 in 250ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 208ms
+ ✓ Compiled in 1780ms (5137 modules)
+ GET /game 200 in 58ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 104ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 55ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 41ms
+[resolve] start { roundId: 1759337220, winningSide: 'up' }
+[resolve] start { roundId: 1759337220, winningSide: 'up' }
+[resolve] result {
+  resolved: true,
+  credits: [ { playerId: 2, delta: '-200000000000000', status: 'lost' } ]
+}
+ POST /api/offchain/resolve 200 in 63ms
+[resolve] result { already: true }
+ POST /api/offchain/resolve 200 in 59ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 162ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 10ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 171ms
+ POST /api/offchain/bets 200 in 42ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 104ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 124ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 107ms
+Fetching HYPE price from Hyperliquid...
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 300ms
+[resolve] start { roundId: 1759337280, winningSide: 'up' }
+[resolve] start { roundId: 1759337280, winningSide: 'up' }
+[resolve] result {
+  resolved: true,
+  credits: [ { playerId: 2, delta: '380000000000000', status: 'won' } ]
+}
+ POST /api/offchain/resolve 200 in 146ms
+[resolve] result { already: true }
+ POST /api/offchain/resolve 200 in 80ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 15ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 15ms
+ ○ Compiling /withdraw ...
+ ✓ Compiled /withdraw in 9.9s (5496 modules)
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 9983ms
+ GET /withdraw 200 in 11749ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 65ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 96ms
+ ○ Compiling /api/offchain/withdraw ...
+ ✓ Compiled /api/offchain/withdraw in 2.7s (10633 modules)
+ POST /api/offchain/withdraw 400 in 2811ms
+ GET /withdraw 200 in 186ms
+ POST /api/offchain/withdraw 400 in 60ms
+ POST /api/offchain/withdraw 400 in 42ms
+ POST /api/offchain/withdraw 400 in 22ms
+ ✓ Compiled in 5.5s (10607 modules)
+ GET /withdraw 200 in 328ms
+ ✓ Compiled in 1427ms (10607 modules)
+ GET /withdraw 200 in 66ms
+ GET /game 200 in 258ms
+ ○ Compiling /api/offchain/profile ...
+ ✓ Compiled /api/offchain/profile in 1060ms (5488 modules)
+ ✓ Compiled (5492 modules)
+Fetching HYPE price from Hyperliquid...
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 3266ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 28ms
+Successfully fetched ETH data from API: 100 candles
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 3476ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 15ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 18ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 3579ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 17ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 110ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 348ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 279ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 136ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 125ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 358ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 24.8s (5492 modules)
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 25793ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 19ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 1968ms
+ ✓ Compiled in 14.5s (10629 modules)
+ GET /game 200 in 3207ms
+ GET /game 200 in 1018ms
+ GET /favicon.ico 200 in 365ms
+ GET /favicon.ico 200 in 484ms
+ GET /favicon.ico 200 in 1754ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.5s (5494 modules)
+ ✓ Compiled in 1ms (5499 modules)
+ ✓ Compiled in 1ms (5499 modules)
+ ✓ Compiled in 2ms (5499 modules)
+Fetching HYPE price from Hyperliquid...
+ GET /favicon.ico 200 in 13352ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 13395ms
+Successfully fetched ETH data from API: 100 candles
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 12769ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 15482ms
+ ✓ Compiled in 1ms (5499 modules)
+ GET / 200 in 18757ms
+ GET /game 200 in 14159ms
+Fetching HYPE price from Hyperliquid...
+Successfully fetched ETH data from API: 100 candles
+ GET /favicon.ico 200 in 115ms
+ GET /favicon.ico 200 in 66ms
+ GET /favicon.ico 200 in 72ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 52ms
+ GET /favicon.ico 200 in 41ms
+ GET /api/price-data?symbol=HYPEUSDT&interval=1m&limit=1 200 in 21ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 202ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 214ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 18ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 26ms
+ GET /api/price-data?symbol=ETHUSDT&interval=1h&limit=100 200 in 19ms
+ GET / 200 in 765ms
+ GET / 200 in 235ms
+ HEAD /game 200 in 1198ms
+ ○ Compiling /api/offchain/bets ...
+ ✓ Compiled /api/offchain/bets in 3s (5501 modules)
+ POST /api/offchain/bets 200 in 3176ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 29ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 119ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 68ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 136ms
+ ○ Compiling /api/offchain/resolve ...
+ ✓ Compiled /api/offchain/resolve in 4.5s (5494 modules)
+[resolve] start { roundId: 1759337700, winningSide: 'down' }
+[resolve] start { roundId: 1759337700, winningSide: 'down' }
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 1314ms
+[resolve] result {
+  resolved: true,
+  credits: [ { playerId: 2, delta: '-200000000000000', status: 'lost' } ]
+}
+ POST /api/offchain/resolve 200 in 5897ms
+[resolve] result { already: true }
+ POST /api/offchain/resolve 200 in 5890ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 9ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 22ms
+ POST /api/offchain/bets 200 in 62ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 69ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 47ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 33ms
+[resolve] start { roundId: 1759337760, winningSide: 'down' }
+[resolve] start { roundId: 1759337760, winningSide: 'down' }
+[resolve] result {
+  resolved: true,
+  credits: [ { playerId: 2, delta: '380000000000000', status: 'won' } ]
+}
+ POST /api/offchain/resolve 200 in 159ms
+[resolve] result { already: true }
+ POST /api/offchain/resolve 200 in 50ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 9ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 10ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 111ms
+ GET /withdraw 200 in 633ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 119ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 33ms
+ ○ Compiling /api/vault/withdraw ...
+ ⨯ ./src/app/api/vault/withdraw/route.ts:2:1
+Module not found: Can't resolve '../../../lib/prisma'
+  1 | import { NextRequest, NextResponse } from 'next/server';
+> 2 | import { prisma } from '../../../lib/prisma';
+    | ^
+  3 | import { ethers } from 'ethers';
+  4 |
+  5 | const VAULT_ABI = [
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ ./src/app/api/vault/withdraw/route.ts:2:1
+Module not found: Can't resolve '../../../lib/prisma'
+  1 | import { NextRequest, NextResponse } from 'next/server';
+> 2 | import { prisma } from '../../../lib/prisma';
+    | ^
+  3 | import { ethers } from 'ethers';
+  4 |
+  5 | const VAULT_ABI = [
+
+https://nextjs.org/docs/messages/module-not-found
+ GET /withdraw 500 in 10355ms
+ POST /api/vault/withdraw 500 in 15158ms
+ GET /withdraw 500 in 17ms
+ GET /withdraw 500 in 18ms
+ GET /withdraw 500 in 63ms
+ ⨯ ./src/app/api/vault/withdraw/route.ts:2:1
+Module not found: Can't resolve '../../../lib/prisma'
+  1 | import { NextRequest, NextResponse } from 'next/server';
+> 2 | import { prisma } from '../../../lib/prisma';
+    | ^
+  3 | import { ethers } from 'ethers';
+  4 |
+  5 | const VAULT_ABI = [
+
+https://nextjs.org/docs/messages/module-not-found
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 500 in 1634ms
+ GET /withdraw 500 in 29ms
+ ⨯ ./src/app/api/vault/withdraw/route.ts:2:1
+Module not found: Can't resolve '../../../lib/prisma'
+  1 | import { NextRequest, NextResponse } from 'next/server';
+> 2 | import { prisma } from '../../../lib/prisma';
+    | ^
+  3 | import { ethers } from 'ethers';
+  4 |
+  5 | const VAULT_ABI = [
+
+https://nextjs.org/docs/messages/module-not-found
+ GET / 500 in 24ms
+ GET / 500 in 33ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /withdraw 500 in 887ms
+ ✓ Compiled /favicon.ico in 5.1s (10972 modules)
+ GET /withdraw 200 in 3959ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /withdraw 200 in 1394ms
+ GET /withdraw 200 in 71ms
+ GET /favicon.ico 200 in 67ms
+ GET /favicon.ico 200 in 203ms
+ ○ Compiling /api/offchain/profile ...
+ GET / 200 in 464ms
+ ✓ Compiled /api/offchain/profile in 3.3s (10977 modules)
+ ✓ Compiled in 1ms (5685 modules)
+ ✓ Compiled in 0ms (5685 modules)
+ ✓ Compiled in 0ms (5685 modules)
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 4996ms
+ GET / 200 in 4044ms
+ ✓ Compiled in 0ms (5685 modules)
+ HEAD /withdraw 200 in 3749ms
+ GET /withdraw 200 in 3949ms
+ GET /api/offchain/profile?address=0xde2371ac2d8bd199e7e52162639b14f43cb88e68 200 in 1754ms
+ ○ Compiling /api/vault/withdraw ...
+ ✓ Compiled /api/vault/withdraw in 2.3s (5861 modules)
+ POST /api/vault/withdraw 400 in 3493ms
+ ✓ Compiled in 5.2s (10946 modules)
+ GET /withdraw 200 in 425ms
+ ✓ Compiled in 675ms (5288 modules)
+ GET /withdraw 200 in 31ms
+   Reload env: .env
+ ✓ Compiled in 4.7s (10946 modules)
+ GET /withdraw 200 in 100ms
+   Reload env: .env
+ ✓ Compiled in 1886ms (10932 modules)
+ GET /withdraw 200 in 52ms
+   Reload env: .env.local
+ ✓ Compiled in 12.4s (10932 modules)
+ GET /withdraw 200 in 142ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 5.8s (10937 modules)
+ GET /withdraw 404 in 6972ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled / in 3.7s (5675 modules)
+ ✓ Compiled (5680 modules)
+ GET /favicon.ico 200 in 4699ms
+ GET /favicon.ico 200 in 16ms
+ GET /favicon.ico 200 in 18ms
+ GET / 200 in 2826ms
+ GET / 200 in 44ms
+   Reload env: .env.local
+ ✓ Compiled in 11.6s (10932 modules)
+   Reload env: .env.local
+[?25h

@@ -1,0 +1,909 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a1a;
+  --foreground: #e0e0ff;
+  --primary: #4a9dff;
+  --secondary: #9d4edd;
+  --accent: #ff6b6b;
+  --card-bg: rgba(20, 20, 40, 0.7);
+  --border-color: rgba(100, 150, 255, 0.2);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a1a 0%, #12122a 50%, #0a0a1a 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Retro Arcade Grid Background */
+.retro-arcade-bg {
+  background: 
+    linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #0a0a0a 50%, #1a1a1a 75%, #0a0a0a 100%);
+  background-size: 20px 20px, 20px 20px, 100% 100%;
+  position: relative;
+}
+
+.retro-arcade-bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(0, 255, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 0, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.03) 0%, transparent 70%);
+  z-index: -1;
+  animation: retroPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes retroPulse {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.7; }
+}
+
+/* Cyberpunk Neon Grid Background */
+.cyberpunk-neon-bg {
+  background: 
+    linear-gradient(90deg, rgba(0, 255, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(0, 255, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(135deg, #000011 0%, #001122 25%, #000011 50%, #001122 75%, #000011 100%);
+  background-size: 30px 30px, 30px 30px, 100% 100%;
+  position: relative;
+}
+
+.cyberpunk-neon-bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 10%, rgba(128, 255, 0, 0.08) 0%, transparent 60%);
+  z-index: -1;
+  animation: cyberGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes cyberGlow {
+  0% { 
+    opacity: 0.4;
+    filter: hue-rotate(0deg);
+  }
+  100% { 
+    opacity: 0.8;
+    filter: hue-rotate(20deg);
+  }
+}
+
+/* 8-bit Space Background */
+.bit-space-bg {
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(135deg, #000033 0%, #000066 25%, #000033 50%, #000066 75%, #000033 100%);
+  background-size: 100px 100px, 150px 150px, 200px 200px, 100% 100%;
+  position: relative;
+}
+
+.bit-space-bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(0, 100, 255, 0.05) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(255, 0, 100, 0.05) 50%, transparent 70%);
+  z-index: -1;
+  animation: spaceShift 6s ease-in-out infinite alternate;
+}
+
+@keyframes spaceShift {
+  0% { transform: translateX(-10px) translateY(-5px); }
+  100% { transform: translateX(10px) translateY(5px); }
+}
+
+/* Matrix Digital Rain Background */
+.matrix-rain-bg {
+  background: linear-gradient(135deg, #000000 0%, #001100 50%, #000000 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-rain-bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(90deg, transparent 98%, rgba(0, 255, 0, 0.1) 100%),
+    linear-gradient(90deg, transparent 96%, rgba(0, 255, 0, 0.05) 100%),
+    linear-gradient(90deg, transparent 94%, rgba(0, 255, 0, 0.08) 100%);
+  background-size: 2px 100%, 4px 100%, 6px 100%;
+  background-position: 0 0, 0 0, 0 0;
+  z-index: -1;
+  animation: matrixRain 2s linear infinite;
+}
+
+@keyframes matrixRain {
+  0% { background-position: 0 0, 0 0, 0 0; }
+  100% { background-position: 0 100vh, 0 100vh, 0 100vh; }
+}
+
+/* Game Boy Green Background */
+.gameboy-green-bg {
+  background: 
+    linear-gradient(90deg, rgba(155, 188, 15, 0.1) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(155, 188, 15, 0.1) 1px, transparent 1px),
+    linear-gradient(135deg, #0f380f 0%, #306230 25%, #0f380f 50%, #306230 75%, #0f380f 100%);
+  background-size: 8px 8px, 8px 8px, 100% 100%;
+  position: relative;
+}
+
+.gameboy-green-bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(155, 188, 15, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 172, 15, 0.08) 0%, transparent 50%);
+  z-index: -1;
+  animation: gameboyFlicker 2s ease-in-out infinite alternate;
+}
+
+@keyframes gameboyFlicker {
+  0% { opacity: 0.6; }
+  100% { opacity: 0.9; }
+}
+
+/* Pixel UI base helpers */
+.pixel-font {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif !important;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pixel-bg {
+  background: repeating-linear-gradient(
+    45deg,
+    #0b0b16,
+    #0b0b16 8px,
+    #0e0e1c 8px,
+    #0e0e1c 16px
+  );
+}
+
+.pixel-outline {
+  border: 4px solid #000;
+  box-shadow:
+    0 0 0 2px #e6e6e6 inset,
+    0 0 0 6px #000 inset,
+    0 0 0 8px #5b21b6 inset,
+    0 8px 0 0 #000;
+}
+
+.pixel-card {
+  background: #101024;
+  border-radius: 0;
+  padding: 20px;
+  border: 4px solid #000;
+  box-shadow:
+    0 0 0 2px #d1d5ff inset,
+    0 0 0 6px #000 inset,
+    0 8px 0 0 #000;
+}
+
+.pixel-button {
+  display: inline-block;
+  background: #7c3aed;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 0;
+  border: 4px solid #000;
+  box-shadow:
+    0 0 0 2px #e9d5ff inset,
+    0 0 0 6px #000 inset,
+    0 6px 0 0 #000;
+  text-transform: uppercase;
+  cursor: pointer !important;
+  position: relative;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.pixel-button:hover {
+  background: #6d28d9;
+}
+
+.pixel-button:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 0 0 2px #e9d5ff inset,
+    0 0 0 6px #000 inset,
+    0 4px 0 0 #000;
+}
+
+/* Pixel button variants */
+.pixel-button--green { background: #16a34a; }
+.pixel-button--green:hover { background: #15803d; }
+.pixel-button--red { background: #dc2626; }
+.pixel-button--red:hover { background: #b91c1c; }
+.pixel-button--blue { background: #2563eb; }
+.pixel-button--blue:hover { background: #1d4ed8; }
+
+/* Pixel card subtle variants */
+.pixel-card--soft {
+  box-shadow:
+    0 0 0 2px #c7d2fe inset,
+    0 0 0 6px #000 inset,
+    0 6px 0 0 #000;
+}
+
+.pixel-tag {
+  background: #0f172a;
+  border: 3px solid #000;
+  padding: 6px 10px;
+  box-shadow: 0 0 0 2px #c7d2fe inset, 0 0 0 5px #000 inset;
+}
+
+/* Stars background effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #4a9dff, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(157, 78, 221, 0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 160px 30px, #4a9dff, transparent),
+    radial-gradient(1px 1px at 200px 90px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 250px 40px, rgba(157, 78, 221, 0.6), transparent),
+    radial-gradient(1px 1px at 280px 70px, #fff, transparent),
+    radial-gradient(2px 2px at 320px 30px, #4a9dff, transparent),
+    radial-gradient(1px 1px at 360px 80px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 390px 20px, rgba(157, 78, 221, 0.8), transparent),
+    radial-gradient(1px 1px at 420px 60px, #fff, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  opacity: 0.3;
+  z-index: -1;
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.2; }
+  100% { opacity: 0.4; }
+}
+
+.cosmic-glow {
+  box-shadow: 0 0 15px rgba(74, 157, 255, 0.3);
+}
+
+.neon-border {
+  border: 1px solid var(--border-color);
+}
+
+.neon-text {
+  color: #4a9dff;
+  text-shadow: 0 0 8px rgba(74, 157, 255, 0.6);
+}
+
+.neon-text-secondary {
+  color: #9d4edd;
+  text-shadow: 0 0 8px rgba(157, 78, 221, 0.6);
+}
+
+.neon-text-accent {
+  color: #ff6b6b;
+  text-shadow: 0 0 8px rgba(255, 107, 107, 0.6);
+}
+
+/* Enhanced header styling for Kairos text */
+.header-text {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #4a9dff, #9d4edd, #ff6b6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 
+    0 0 10px rgba(74, 157, 255, 0.8),
+    0 0 20px rgba(157, 78, 221, 0.6),
+    0 0 30px rgba(255, 107, 107, 0.4);
+  letter-spacing: 2px;
+  position: relative;
+  padding: 0.5rem 1.5rem;
+  /* Simplified for clarity - removed animation that may cause performance issues */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Additional fixes for text clarity */
+  will-change: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.header-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(74, 157, 255, 0.1), rgba(157, 78, 221, 0.1));
+  border-radius: 12px;
+  z-index: -2;
+}
+
+.header-text::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, rgba(74, 157, 255, 0.3), rgba(157, 78, 221, 0.3), rgba(255, 107, 107, 0.3));
+  border-radius: 14px;
+  z-index: -3;
+  opacity: 0.7;
+  /* Simplified for clarity - removed animation that may cause performance issues */
+}
+
+.pixel-title {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #f8fafc 0%, #a78bfa 40%, #22d3ee 60%, #f472b6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.pixel-title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Pixel title with subtle glow/flicker animation */
+.pixel-title-animated {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #f8fafc; /* visible on dark backgrounds */
+  background: linear-gradient(90deg, #ffffff 0%, #a78bfa 40%, #22d3ee 60%, #f472b6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+  text-shadow:
+    0 0 10px rgba(167, 139, 250, 0.55),
+    0 0 18px rgba(34, 211, 238, 0.35),
+    0 0 26px rgba(244, 114, 182, 0.25);
+  animation: pixelGlow 2.2s ease-in-out infinite;
+}
+
+@keyframes pixelGlow {
+  0% { text-shadow: 0 0 6px rgba(167,139,250,0.35), 0 0 10px rgba(34,211,238,0.2), 0 0 14px rgba(244,114,182,0.15); }
+  50% { text-shadow: 0 0 12px rgba(167,139,250,0.65), 0 0 18px rgba(34,211,238,0.45), 0 0 26px rgba(244,114,182,0.35); }
+  100% { text-shadow: 0 0 6px rgba(167,139,250,0.35), 0 0 10px rgba(34,211,238,0.2), 0 0 14px rgba(244,114,182,0.15); }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* Alternative compact pixel logo badge */
+.pixel-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  background: #111327;
+  color: #e2e8f0;
+  border: 4px solid #000;
+  box-shadow:
+    0 0 0 2px #9aa7ff inset,
+    0 0 0 6px #000 inset,
+    0 6px 0 #000;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.pixel-logo .dot {
+  width: 8px;
+  height: 8px;
+  background: #7c3aed;
+  margin-right: 10px;
+  box-shadow: 2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(74, 157, 255, 0.1), transparent);
+  transition: 0.5s;
+}
+
+.glass-card:hover::before {
+  left: 100%;
+}
+
+.glass-button {
+  background: linear-gradient(45deg, rgba(74, 157, 255, 0.2), rgba(157, 78, 221, 0.2));
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  color: var(--foreground);
+  transition: all 0.3s ease;
+  cursor: pointer !important;
+  border-radius: 8px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.glass-button:hover::before {
+  left: 100%;
+}
+
+.glass-button:hover {
+  background: linear-gradient(45deg, rgba(74, 157, 255, 0.3), rgba(157, 78, 221, 0.3));
+  box-shadow: 0 0 15px rgba(74, 157, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.wallet-adapter-button {
+  background: linear-gradient(45deg, rgba(74, 157, 255, 0.2), rgba(157, 78, 221, 0.2)) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color) !important;
+  color: var(--foreground) !important;
+  transition: all 0.3s ease;
+  border-radius: 8px !important;
+  font-family: var(--font-sans), sans-serif !important;
+  font-weight: 500 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.wallet-adapter-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.wallet-adapter-button:hover::before {
+  left: 100%;
+}
+
+.wallet-adapter-button:hover {
+  background: linear-gradient(45deg, rgba(74, 157, 255, 0.3), rgba(157, 78, 221, 0.3)) !important;
+  box-shadow: 0 0 15px rgba(74, 157, 255, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.wallet-adapter-button-trigger {
+  padding: 12px 24px !important;
+  height: auto !important;
+}
+
+.wallet-adapter-modal {
+  background: rgba(10, 10, 26, 0.95) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+}
+
+.wallet-adapter-modal-button-close {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+.wallet-adapter-modal-button-close:hover {
+  background: rgba(74, 157, 255, 0.3) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 10, 26, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #4a9dff, #9d4edd);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #5aa7ff, #ad5eee);
+}
+
+/* Fade in animation for bet confirmation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Cursor pointer styles for all clickable elements */
+button, 
+[role="button"], 
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"],
+a,
+[onclick],
+[data-clickable],
+.clickable,
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Enhanced cursor styles for luxury feel */
+button:hover,
+[role="button"]:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+a:hover,
+[onclick]:hover,
+[data-clickable]:hover,
+.clickable:hover,
+.cursor-pointer:hover {
+  cursor: pointer !important;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* Disabled elements should not have pointer cursor */
+button:disabled,
+[role="button"]:disabled,
+input:disabled,
+a[aria-disabled="true"],
+.disabled {
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}
+
+/* Loading state cursor */
+.loading {
+  cursor: wait !important;
+}
+
+/* Specific cursor styles for common components */
+.wallet-adapter-button,
+.wallet-adapter-button-trigger,
+.wallet-adapter-modal-button-close {
+  cursor: pointer !important;
+}
+
+.wallet-adapter-button:hover,
+.wallet-adapter-button-trigger:hover {
+  cursor: pointer !important;
+}
+
+/* Game interface cursor styles */
+.bet-button,
+.prediction-button,
+.up-button,
+.down-button,
+.connect-wallet-button,
+.deposit-button,
+.withdraw-button,
+.max-button,
+.submit-button,
+.confirm-button,
+.cancel-button {
+  cursor: pointer !important;
+  transition: all 0.2s ease;
+}
+
+.bet-button:hover,
+.prediction-button:hover,
+.up-button:hover,
+.down-button:hover,
+.connect-wallet-button:hover,
+.deposit-button:hover,
+.withdraw-button:hover,
+.max-button:hover,
+.submit-button:hover,
+.confirm-button:hover,
+.cancel-button:hover {
+  cursor: pointer !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation and menu items */
+.nav-link,
+.menu-item,
+.tab-button,
+.dropdown-item {
+  cursor: pointer !important;
+}
+
+.nav-link:hover,
+.menu-item:hover,
+.tab-button:hover,
+.dropdown-item:hover {
+  cursor: pointer !important;
+  background-color: rgba(74, 157, 255, 0.1);
+}
+
+/* Form elements */
+input[type="number"],
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  cursor: text;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer !important;
+}
+
+/* Interactive cards and containers */
+.game-card,
+.bet-card,
+.profile-card,
+.history-item {
+  cursor: pointer !important;
+  transition: all 0.2s ease;
+}
+
+.game-card:hover,
+.bet-card:hover,
+.profile-card:hover,
+.history-item:hover {
+  cursor: pointer !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Close buttons and icons */
+.close-button,
+.close-icon,
+.dismiss-button,
+.cancel-icon {
+  cursor: pointer !important;
+}
+
+.close-button:hover,
+.close-icon:hover,
+.dismiss-button:hover,
+.cancel-icon:hover {
+  cursor: pointer !important;
+  transform: scale(1.1);
+}
+
+/* Pixel Header Button - matches the Kairos header style */
+.pixel-header-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #1a1a2e;
+  border: 2px solid #7c3aed;
+  border-radius: 0;
+  box-shadow: 
+    0 0 0 1px rgba(124, 58, 237, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.pixel-header-button:hover {
+  background: #2a2a3e;
+  border-color: #8b5cf6;
+  box-shadow: 
+    0 0 0 1px rgba(139, 92, 246, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.pixel-header-icon {
+  width: 12px;
+  height: 12px;
+  background: #7c3aed;
+  border-radius: 0;
+  box-shadow: 
+    0 0 0 1px rgba(124, 58, 237, 0.5),
+    0 0 4px rgba(124, 58, 237, 0.3);
+  flex-shrink: 0;
+}
+
+.pixel-header-text {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: #ffffff;
+  text-shadow: 
+    0 0 2px rgba(255, 255, 255, 0.8),
+    0 0 4px rgba(124, 58, 237, 0.4);
+  letter-spacing: 0.5px;
+  font-weight: normal;
+}
+
+/* Pixel-style CSS for VaultTicker */
+.pixel-bg {
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(0, 255, 0, 0.1) 50%, transparent 100%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 2px,
+      rgba(0, 255, 0, 0.03) 4px
+    );
+  background-size: 100% 100%, 100% 8px;
+  animation: pixel-scan 2s linear infinite;
+}
+
+.pixel-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: pixel-grid-move 3s linear infinite;
+}
+
+.pixel-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 0, 0.1) 2px,
+    rgba(0, 255, 0, 0.1) 4px
+  );
+  animation: pixel-scanlines-move 0.1s linear infinite;
+}
+
+.pixel-scanlines-moving {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 0, 0.2) 2px,
+    rgba(0, 255, 0, 0.2) 4px
+  );
+  animation: pixel-scanlines-move 0.05s linear infinite;
+}
+
+.pixel-dot {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  border-radius: 0;
+  box-shadow: 
+    0 0 0 1px rgba(0, 255, 0, 0.5),
+    0 0 4px rgba(0, 255, 0, 0.3);
+}
+
+.pixel-text {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  text-shadow: 
+    0 0 2px rgba(0, 255, 0, 0.8),
+    0 0 4px rgba(0, 255, 0, 0.4);
+  letter-spacing: 1px;
+}
+
+.pixel-text-large {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 16px;
+  text-shadow: 
+    0 0 4px rgba(0, 255, 0, 0.8),
+    0 0 8px rgba(0, 255, 0, 0.4);
+  letter-spacing: 2px;
+}
+
+.pixel-border {
+  border: 2px solid rgba(0, 255, 0, 0.5);
+  border-image: 
+    linear-gradient(45deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0.2)) 1;
+  box-shadow: 
+    inset 0 0 4px rgba(0, 255, 0, 0.3),
+    0 0 4px rgba(0, 255, 0, 0.2);
+}
+
+@keyframes pixel-scan {
+  0% { background-position: -100% 0, 0 0; }
+  100% { background-position: 100% 0, 0 0; }
+}
+
+@keyframes pixel-grid-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 20px 20px; }
+}
+
+@keyframes pixel-scanlines-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 4px; }
+}
