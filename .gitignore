@@ -11,11 +11,7 @@ node_modules/
 /.jest/
 /coverage/
 
-# Production
-.env.local
-.env.production
-.env.development
-.env.test
+.env
 
 # Build artifacts
 .next/
@@ -42,5 +38,3 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Prisma
-/src/generated/
