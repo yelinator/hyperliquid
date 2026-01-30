@@ -1,45 +1,46 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://nextjs.org/docs/basic-features/supported-browsers-features#excluding-nextjs-specific-files
+.next/
+out/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.cjs
 
-# testing
-/coverage
+# Testing
+/.jest/
+/coverage/
 
-# next.js
-/.next/
-/out/
+# Production
+.env.local
+.env.production
+.env.development
+.env.test
 
-# production
-/build
+# Build artifacts
+.next/
+dist/
+build/
+coverage/
 
-# misc
+# Log files
+*.log
+.log/
+
+# OS generated files
 .DS_Store
-*.pem
+Thumbs.db
 
-# debug
-npm-debug.log*
+# VS Code
+.vscode/
+
+# yarn
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
-/src/generated/prisma
-
-/src/generated/prisma
+# Prisma
+/src/generated/
